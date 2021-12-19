@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert - between even numbers</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt("Nhập số có 2 số chẵn của bạn: "))
+    let str = num.toString(); /*hiện num dưới dạng chuỗi str*/
+    console.log(str)
+    let array = [str[0]]; /*gán array là mảng chứa phần tử đầu tiên của dãy*/
+    console.log(array[0]);
+    for(let x=1; x<str.length; x++) /*duyệt biến đếm từ 1 đến độ dài của mảng str*/
+    {
+        if((str[x-1] % 2 === 0) && (str[x] % 2 === 0)) { /*Nếu phần tử trước và phần tử hiện đang duyệt chia hết cho 2*/
+            array.push('-',str[x])                       /* thì thêm cả (dấu "-" và chuỗi str[x]) vào mảng array */
+        } else {
+            array.push(str[x])       /*Nếu không phải số chẵn thì chỉ cần thêm chuỗi str[x] vào sau*/
+        }
+    }
+    console.log(array.join(" "))
+    /*Ý tưởng của bài này là tạo ra một mảng mới là
+     mảng array rỗng dùng để chứa các phần tử của chuỗi string,
+     sau đó duyệt số chẵn rồi thêm(push) các
+     phần tử của chuỗi stringvào sau mảng array */
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UPPERlower</title>
+</head>
+<body>
+<script>
+    let message = prompt("Nhập văn bản: ");
+    console.log(message.toString());
+    let str = message.toString();
+    let upper = 'ABCDEFGHIKLMNOPQRSTUVWXYZ';
+    let lower = 'abcdefghiklmnopqrstuvwxyz';
+    let array = [];
+    for (let dem = 0; dem < str.length; dem++ ){
+        if ( upper.indexOf(str[dem]) !== -1 ){
+            array.push(str[dem].toLowerCase())
+        } else if ( lower.indexOf(str[dem]) !== -1){
+            array.push(str[dem].toUpperCase())
+        } else array.push(str[dem])
+    }
+    console.log(array.toString())
+</script>
+</body>
+</html>
